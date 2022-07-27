@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>linkTree</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="background">
+
+    <div class="toggleTheme">
+      <div class="point"></div>
+      <div class="point"></div>
+      <div class="point"></div>
+    </div>
+  
+    <div class="open-modal">
+      <div class="toggleTheme2">
+        <div class="point2">X</div>
+      </div>
+  
+      <div class="container2">
+        <span class="moon"><img src="./assets/moon.svg" alt=""></span>
+        <span class="sun"><img src="./assets/sun.svg" alt=""></span>
+        <div id="switcher"></div>
+      </div>  
+  
+    </div>
+  
+    <main>
+      
+    </main>
+
+    <div class="container">
+      <div class="profile">
+        <div class="img-profile">
+          <img src="./assets/background.png" alt="">
+        </div>
+        <div class="title">
+          <p>@instagram</p>
+        </div>
+      </div>
+  
+      <div class="links">
+        <div class="card">links</div>
+        <div class="card">links</div>
+        <div class="card">links</div>
+        <div class="card">links</div>
+      </div>
+      
+      <div class="footer">
+        <div class="social-media">
+          <img src="assets/twitter.svg" alt="">
+          <img src="assets/twitch.svg" alt="">
+          <img src="assets/instagram.svg" alt="">
+          <img src="assets/linkedin.svg" alt="">
+          <img src="assets/github.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var toggleTheme = document.querySelector('.toggleTheme');
+    var openModal = document.querySelector('.open-modal');
+    var toggleTheme2 = document.querySelector('.toggleTheme2');
+    var container = document.querySelector('.container');
+    var background = document.querySelector('.background')
+    var switcher = document.getElementById('switcher');
+
+    toggleTheme.addEventListener('click', () => {
+      toggleTheme.classList.add('disabled');
+      openModal.classList.add('active');
+      container.classList.add('disabled');
+      toggleTheme2.addEventListener('click', () =>{
+        toggleTheme.classList.remove('disabled');
+        container.classList.remove('disabled');
+        openModal.classList.remove('active');
+      })
+    })
+
+    switcher.addEventListener('click', ()=>{
+      switcher.classList.toggle('active');
+      background.classList.toggle('changeBackground');
+    })
+  </script>
+
+</body>
+
+</html>
