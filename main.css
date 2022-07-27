@@ -235,12 +235,19 @@ body {
   .container {
     width: 100%;
   }
+  .card{
+    width: 70%;
+  }
+  .social-media{
+    width: 70%;
+  }
   .open-modal {
     height: 42vh;
     overflow: hidden;
   }
 
   .toggleTheme2{
-    left: 90%;
+    top: 10%;
+    left: 85%;
   }
 }
