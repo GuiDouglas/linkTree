@@ -52,7 +52,7 @@ body {
 
 .container{
   width: 980px;
-  height: 94vh;
+  height: 100vh;
   padding: 8rem 0;
   margin: 0 auto;
   display: flex;
